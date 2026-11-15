@@ -1,0 +1,17 @@
+#footer{
+    position: fixed;
+    bottom: 0px;
+}
+#team-content{
+    margin-top: 100px;
+    text-align: center;
+}
+.designation{
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+.name{
+    margin-bottom: 25px; 
+    font-size: 20px;
+    line-height: 22px;
+}

@@ -29,11 +29,12 @@ header{
 }
 #footer{
     width: 100dvw;
-    border-top: solid 1px black;
-    border-radius: 20px;
+    /* border-top: solid 1px black;
+    border-radius: 20px; */
     padding: 25px;
     display: flex;
     justify-content: center;
+    color: grey;
 }
 #nav-btn, #search-btn{
   margin: 25px;
@@ -79,7 +80,6 @@ header{
 }
 a{
     all: unset;
-    text-decoration: underline;
 }
 
 #menu{
@@ -115,12 +115,6 @@ a{
   bottom: 20px;
   width: calc(100% - 50px);
   font-size: 20px;
-}
-#text{
-  margin: 20%;
-  text-align: justify;
-  font-size: 18px;
-  line-height: 25px;
 }
 
 #explore-title{
@@ -160,20 +154,27 @@ a{
 }
 .item-title{
     display: inline-block;
-    font-size: 20px;
+    font-size: 25px;
     margin-bottom: 5px;
     margin-top: 20px;
+    text-decoration: none;
 }
 .item-line2{
     color: grey;
-    font-size: 15px;
-    line-height: 17px;
+    font-size: 16px;
+    line-height: 19px;
 }
-.small-cta{
-    font-size: 18px;
-    margin-top: 30px;
-    font-style: italic;
+.item-date{
+    margin-bottom: 10px;
+    font-size: 16px;
 }
+
+.page-title{
+    margin-bottom: 30px;
+    font-size: 30px;
+    text-align: center;
+}
+
 
 
 
@@ -187,8 +188,15 @@ a{
 
 @media screen and (max-width: 800px) {
     #latest-img-cont{
-    background: grey;
-    width: 100%;
-    aspect-ratio: 5/3;
-}
+        background: grey;
+        width: 100%;
+        aspect-ratio: 5/3;
+    }
+    #intro{
+        margin-top: 100px;
+    }
+    #intro-txt{
+        font-size: 30px;
+        width: 95%;
+    }
 }
