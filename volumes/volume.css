@@ -47,8 +47,8 @@
 
 @media screen and (max-width: 800px) {
     .main-text{
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 0px;
+        margin-right: 0px;
         font-size: 17px;
     }
     .content-author, .content-title{
