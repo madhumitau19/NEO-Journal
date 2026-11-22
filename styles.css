@@ -383,6 +383,7 @@ a:hover{
       display: none;
     }
     #sub-info{
-      width: 400px;
+      width: 350px;
+      font-size: 17px;
     }
 }
