@@ -4,12 +4,21 @@
   box-sizing: border-box;
 }
 
+:root{
+  --nyu-purple: #57068C;
+  --border-grey: rgb(190, 190, 190);
+}
+
+
+
 header div, .menu-item, .vol{
     cursor: pointer;
 }
 
 body{
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Frank Ruhl Libre", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 header{
   width: 100dvw;
@@ -23,9 +32,66 @@ header{
   align-items: center;
   z-index: 1000;
   backdrop-filter: blur(2px);
-  border-bottom: solid 1px black;
+  border-bottom: solid 1px var(--border-grey);
   border-radius: 20px;
   background-color: white;
+  color: var(--nyu-purple);
+  font-family: "Montserrat", sans-serif;
+}
+#past-issue-list{
+  position: fixed;
+  top: 65px;
+  right: 20px;
+  border: var(--border-grey) solid 1px;
+  width: 95px;
+  border-radius: 0px 0px 20px 20px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-transform: uppercase;
+  font-family: montserrat;
+  color: var(--nyu-purple);
+  gap: 10px;
+  font-weight: 500;
+
+}
+#past-issue-list.show{
+  display: flex;
+}
+#menu-mobile{
+  height: 100dvh;
+  width: 100dvw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 999;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  color: var(--nyu-purple)
+}
+#menu-mobile.show{
+  display: flex;
+}
+#menu-icon{
+  display: none;
+}
+#close-icon{
+  display: none;
+}
+#close-icon.open{
+  display: block;
+}
+#menu-bars{
+  display: block;
+}
+#menu-bars.open{
+  display: none;
 }
 #footer{
     width: 100dvw;
@@ -33,18 +99,63 @@ header{
     border-radius: 20px; */
     padding: 25px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     color: grey;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    text-align: center;
+    gap: 10px;
 }
-#nav-btn, #search-btn{
+#footer p{
+  max-width: 70%;
+}
+#social-link{
+  display: flex;
+  gap: 10px;
+}
+#insta-icon{
+  width: 30px;
+}
+#email{
+  display: flex;
+  align-items: center;
+}
+#insta-icon img{
+  width: 100%;
+  color: grey;
+}
+#spacer-line{
+  width: 1px;
+  background-color: grey;
+  height: 30px;
+}
+.nav-btn{
   margin: 25px;
 }
 #site-title{
   font-size: 50px;
-  position: absolute;
+  /* position: absolute;
   top: 5px;
-  left: calc(50% - 51px);
+  left: calc(50% - 50px); */
+  color: black;
+  width: 100px;
 }
+#site-title img{
+  width: 100%;
+}
+#header-left, #header-mid, #header-right{
+  width: 33.33%;
+  display: flex;
+}
+#header-mid{
+  justify-content: center;
+}
+#header-left, #header-right{
+  justify-content: space-between;
+}
+
 #intro{
   margin-top: 125px;
   text-align: center;
@@ -58,6 +169,11 @@ header{
   width: 400px;
   font-size: 30px;
   line-height: 33px;
+}
+#sub-info{
+  font-size: 20px;
+  max-width: 500px;
+  margin-top: 20px;
 }
 .cta-text{
   font-size: 20px;
@@ -74,12 +190,46 @@ header{
   margin-bottom: 30px;
 }
 #latest-img-cont{
-    background: grey;
+    background: var(--nyu-purple);
     width: 100%;
     aspect-ratio: 5/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    height: fit-content;
+  margin-top: 60px;
 }
+
+#open-call{
+  color: white;
+  font-size: 70px;
+  text-transform: uppercase;
+  font-family: montserrat;
+  line-height: 100%;
+  max-width: 900px;
+  text-align: left;
+  height: fit-content;
+}
+#open-call-submit{
+  background: var(--nyu-purple);
+  width: 100%;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    height: fit-content;
+    margin-top: 10px;
+    border-radius: 0px 0px 20px 20px;
+  color: white;
+  font-family: montserrat; 
+}
+
 a{
     all: unset;
+}
+a:hover{
+  cursor:pointer;
 }
 
 #menu{
@@ -118,7 +268,7 @@ a{
 }
 
 #explore-title{
-    border-bottom: solid 1px black;
+    border-bottom: solid 1px var(--border-grey);
     border-radius: 20px;
     background: white;
     padding: 25px;
@@ -126,6 +276,9 @@ a{
     text-align: center;
     position: sticky;
     top: 65px;
+    color: #57068c;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
 }
 
 #explore{
@@ -134,7 +287,7 @@ a{
   align-items: center;
   margin-top: 60px;
   font-size: 25px;
-  margin-bottom: 50px;
+  margin-bottom: 75px;
 }
 #explore-grid{
     width: 100%;
@@ -154,15 +307,17 @@ a{
 }
 .item-title{
     display: inline-block;
-    font-size: 25px;
+    font-size: 20px;
     margin-bottom: 5px;
     margin-top: 20px;
     text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
 }
 .item-line2{
     color: grey;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 20px;
 }
 .item-date{
     margin-bottom: 10px;
@@ -173,6 +328,10 @@ a{
     margin-bottom: 30px;
     font-size: 30px;
     text-align: center;
+    color: var(--nyu-purple);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+
 }
 
 
@@ -182,15 +341,29 @@ a{
 
 
 
-
+@media screen and (max-width: 900px){
+    #open-call{
+      font-size: 50px;
+    }
+    .nav-btn{
+      display: none;
+    }
+    #menu-icon{
+      width: 30px;
+      margin-left: 20px;
+      display: block;
+    }
+    #menu-icon img{
+      width: 100%;
+    }
+}
 
 /* MOBILE */
 
 @media screen and (max-width: 800px) {
     #latest-img-cont{
-        background: grey;
-        width: 100%;
         aspect-ratio: 5/3;
+        margin-top: 30px;
     }
     #intro{
         margin-top: 100px;
@@ -198,5 +371,18 @@ a{
     #intro-txt{
         font-size: 30px;
         width: 95%;
+    }
+    #open-call{
+      font-size: 40px;
+    }
+    #social-link{
+      flex-direction: column;
+      align-items: center;
+    }
+    #spacer-line{
+      display: none;
+    }
+    #sub-info{
+      width: 400px;
     }
 }

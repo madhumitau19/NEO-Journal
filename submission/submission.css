@@ -18,6 +18,8 @@
     text-align: left;
     margin-top: 30px;
     margin-bottom: 15px;
+    font-family: "Montserrat", sans-serif;
+
 }
 ul{
     margin-left: 30px;
@@ -36,6 +38,9 @@ em{
 }
 em a{
     text-decoration: underline;
+}
+.italic{
+    font-style: italic;
 }
 
 @media screen and (max-width: 800px) {

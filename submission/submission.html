@@ -6,24 +6,48 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        </style>
         <link rel="stylesheet" href="../styles.css">
         <link rel="stylesheet" href="../submission/submission.css">
     </head>
     <body>
         <header>
-            <div id="nav-btn">Menu</div>
-            <div id="site-title"><a href="../index.html">NEO</a></div>
-            <div id="search-btn"><a href="../submission/submission.html">Submit</a></div>
+        <div id="header-left">
+            <div id="menu-icon">
+                <img id="menu-bars" src="../SVG/menu-icon.svg">
+                <img id="close-icon" src="../SVG/close-icon.svg">
+            </div>
+            <div class="nav-btn"><a href="../about/about.html">About</a></div>
+            <div class="nav-btn"><a href="../team/team.html">Team</a></div>
+        </div>
+        <div id="header-mid">
+            <div id="site-title"><a href="../index.html">
+                <img src="../SVG/logo.svg">
+            </a></div>
+        </div>
+        
+        <div id="header-right">
+            <div class="nav-btn"><a href="../submission/submission.html">Submission</a></div>
+            <div class="nav-btn" id="past-issue">Past Issues</div>
+        </div>
+        
+        <!-- <div class="nav-btn"><a href="submission/submission.html">Submit</a></div> -->
         </header>
-        <section id="menu">
+        <div id="past-issue-list">
+            <p><a href="../volumes/volume-one.html">Vol I</a></p>
+            <p><a href="../volumes/volume-two.html">Vol II</a></p>
+        </div>
+
+        <section id="menu-mobile">
             <div class="menu-item"><a href="../index.html">Home</a></div>
+            <div class="menu-item"><a href="../submission/submission.html">Submission</a></div>
             <div class="menu-item" id="past-issues">Past Issues</div>
             <div class="vol"><a href="../volumes/volume-one.html">Volume I</a></div>
             <div class="vol"><a href="../volumes/volume-two.html">Volume II</a></div>
-            <div class="menu-item"><a href="../submission/submission.html">Submission</a></div>
             <div class="menu-item"><a href="../about/about.html">About</a></div>
             <div class="menu-item"><a href="../team/team.html">Team</a></div>
-            <div id="close-btn" class="menu-item">Close</div>
         </section>
         <section id="submit-content">
             <div class="page-title">Submission Guidelines</div>
@@ -229,7 +253,7 @@
 
             <div class="subhead">Submission</div>
             <div class="text"><em>
-            Submit manuscripts through <a href="">this Google form</a> by March 30th.</em>
+            Submit manuscripts through <a href="">this Google form</a> by March 1st.</em>
             The submission form will request:
             </div>
             <div class="spacer"></div>
@@ -260,7 +284,21 @@
 
         </section>
         <div id="footer">
-            © NEO Journal. All rights reserved.
+            <div id="social-link">
+                <div id="insta-icon">
+                    <a href="https://www.instagram.com/nyu.philosophyforum/">
+                        <img src="../SVG/insta-icon.svg">
+                    </a>
+                </div>
+                <div id="spacer-line">
+
+                </div>
+                <div id="email">
+                    <a href="mailto:nyuphilosophyforum@gmail.com">nyuphilosophyforum@gmail.com</a> 
+                </div>
+            </div>
+            <p class="italic">This publication is published by students at New York University, and NYU is not responsible for its contents. For any questions or business inquiries, please reach out to us at X@gmail.com.</p>
+            <p>© NEO Journal. All rights reserved.</p>
         </div>
         <script src="../script.js" async defer></script>
     </body>
